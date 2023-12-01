@@ -8,6 +8,7 @@ const Booking = () => {
     name: '',
     email: '',
     phone: '',
+    event: 'wedding',
     comments: '',
     date: '',
   })
@@ -37,6 +38,7 @@ useEffect(() => {
       name: val.get('name'),
       email: val.get('email'),
       phone: val.get('phone'),
+      event: val.get('event'),
       comments: val.get('comments'),
       date: val.get('date'),
     }
@@ -81,6 +83,15 @@ useEffect(() => {
                 </div>
                 <div className='mb-3'>
                   <input type='text' name='phone' onChange={e => setValues({ ...values, phone: e.target.value })} className='form-control' placeholder='Enter Phone No' autoComplete='off' />
+                </div>
+                <div className='mb-3'>
+                  Event : 
+                  <select className='ms-3' name='event' onChange={e => setValues({...values, event: e.target.value})}>
+                    <option value='wedding'>Wedding</option>
+                    <option value='engagement'>Engagement</option>
+                    <option value='birthday'>Birthday Celebration</option>
+                    <option value='other'>Other</option>
+                  </select>
                 </div>
                 <div className='mb-3'>
                   <textarea name='comments' onChange={e => setValues({ ...values, comments: e.target.value })} className='form-control' rows="4" cols="50" placeholder='Enter Comments.....' autoComplete='off'>

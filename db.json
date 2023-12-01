@@ -2,27 +2,21 @@
   "booking": [
     {
       "name": "prince",
-      "email": "prince@gmial.com",
+      "email": "prince@gmail.com",
       "phone": "1234567890",
+      "event": "wedding",
       "comments": "something",
-      "date": "2023-12-02",
+      "date": "2023-12-08",
       "id": 1
     },
     {
-      "name": "1",
-      "email": "1",
-      "phone": "1",
-      "comments": "1",
-      "date": "2023-12-03",
+      "name": "mayur",
+      "email": "mg@gmail.com",
+      "phone": "0987654321",
+      "event": "birthday",
+      "comments": "nothing",
+      "date": "2023-12-09",
       "id": 2
-    },
-    {
-      "name": "1",
-      "email": "1",
-      "phone": "1",
-      "comments": "1",
-      "date": "2023-12-04",
-      "id": 3
     }
   ]
 }
