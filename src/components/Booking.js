@@ -9,7 +9,7 @@ const Booking = () => {
     email: '',
     phone: '',
     comments: '',
-    date: 0,
+    date: '',
   })
 
   const [error, setError] = useState({
@@ -40,29 +40,27 @@ useEffect(() => {
       comments: val.get('comments'),
       date: val.get('date'),
     }
-
+    let a = true;
     if (actualData.name && actualData.email && actualData.phone && actualData.comments && actualData.date) {
       data.map((d) => {
-        if(actualData.date !== d.date){
-          axios.post("http://localhost:8000/booking", values)
-          .then(navigate('/'))
-          .catch(err => console.log("Bid",err))
+        if(actualData.date !== d.date &&  a===true){
+          a=true;
         }
         else{
-          console.log("El Error");
+          console.log("Error");
           setError({ status: true, msg: "Date already bookked", type: "Error" })
+          a=false;
         }
         return 0;
       })
-
-      // axios.post("http://localhost:8000/booking", values)
-      //     .then(navigate('/'))
-      //     .catch(err => console.log("Bid",err))
-      //     console.log("Done");
+      if(a===true){
+        axios.post("http://localhost:8000/booking", values)
+        .then(navigate('/'))
+        .catch(err => console.log(err))
+      }
   } else {
       setError({ status: true, msg: "All fields are require", type: "Error" })
   }
-
   })
 
   return (
