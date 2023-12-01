@@ -1,0 +1,28 @@
+{
+  "booking": [
+    {
+      "name": "1",
+      "email": "1",
+      "phone": "1",
+      "comments": "1",
+      "date": "2023-12-01",
+      "id": 1
+    },
+    {
+      "name": "prince",
+      "email": "prince@gmail.com",
+      "phone": "1234567890",
+      "comments": "something",
+      "date": "2023-12-02",
+      "id": 2
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "phone": "1",
+      "comments": "1",
+      "date": "2023-12-02",
+      "id": 3
+    }
+  ]
+}

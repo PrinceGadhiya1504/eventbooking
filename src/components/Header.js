@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
           <div className="container-fluid">
-            <Link to='/profile'className='navbar-brand me-5'>Profile</Link>
+            <Link to='/'className='navbar-brand me-5'>Logo</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -29,6 +29,9 @@ const Header = () => {
                 </li>
                 <li className="nav-item d-flex ">
                   <Link to='/contact' className='nav-link'>Contact</Link>
+                </li>
+                <li className="nav-item d-flex ">
+                  <Link to='/booking' className='nav-link'>Booking</Link>
                 </li>
               </ul>
               </div>
